@@ -64,8 +64,9 @@ During the initialization, you’ll be prompted with several questions. The reco
 - Automatically clear mock calls, instances, contexts, and results before every test?: Select `yes` to reset mocks between tests for consistency.
 
 ### Step 4: Update Jest Configuration
-```typescript
 Replace the generated `jest.config.ts` with the following configuration to integrate Jest with Next.js and set up the JSDOM environment:
+
+```typescript
 
 import type { Config } from 'jest'
 import nextJest from 'next/jest.js'
@@ -89,7 +90,7 @@ export default createJestConfig(config)
 
 **Purpose**: This configuration uses `next/jest` to load Next.js configurations (e.g., `next.config.js` and `.env` files).
 
-Step 5: Enable Jest Setup File
+### Step 5: Enable Jest Setup File
 Uncomment and activate the setupFilesAfterEnv option in `jest.config.ts` to include a setup file for Jest:
 ```typescript
 setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
@@ -138,5 +139,5 @@ After completing all steps, commit your changes with the exact commit message:
 ```bash
 git add .
 git commit -m "setup jest"
-git push origin main
+git push origin master
 ```
